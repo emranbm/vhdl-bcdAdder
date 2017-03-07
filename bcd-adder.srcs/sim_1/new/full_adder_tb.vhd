@@ -2,9 +2,9 @@
 -- Company: 
 -- Engineer: 
 -- 
--- Create Date: 03/05/2017 07:38:33 AM
+-- Create Date: 03/07/2017 11:21:22 AM
 -- Design Name: 
--- Module Name: full_adder - Behavioral
+-- Module Name: full_adder_tb - Behavioral
 -- Project Name: 
 -- Target Devices: 
 -- Tool Versions: 
@@ -31,17 +31,23 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity full_adder is
+entity full_adder_tb is
+--  Port ( );
+end full_adder_tb;
+
+
+
+architecture Behavioral of full_adder_tb is
+component full_adder is
   port (
   a, b, cin: in std_logic;
   s, cout: out std_logic
   );
-end full_adder;
+end component;
 
-architecture Behavioral of full_adder is
+signal s, cout: std_logic;
+
 begin
 
-s <= a xor b xor cin;
-cout <= (a and b) or (a and cin) or (b and cin);
-
+fa: full_adder port map ('1', '1', '0', s, cout);
 end Behavioral;

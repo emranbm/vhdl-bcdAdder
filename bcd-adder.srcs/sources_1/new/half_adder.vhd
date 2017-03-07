@@ -33,12 +33,15 @@ use IEEE.STD_LOGIC_1164.ALL;
 
 entity half_adder is
   port (
-  a, b: in integer range 0 to 1;
-  s, cout: out integer range 0 to 1);
+  a, b: in std_logic;
+  s, cout: out std_logic
+  );
 end half_adder;
 
 architecture Behavioral of half_adder is
 begin
-s <= (a + b) mod 2;
-cout <= (a + b) / 2;
+
+s <= a xor b;
+cout <= a and b;
+
 end Behavioral;
