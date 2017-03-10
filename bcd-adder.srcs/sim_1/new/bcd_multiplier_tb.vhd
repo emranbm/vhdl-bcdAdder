@@ -31,13 +31,13 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity bcd_adder_tb is
+entity bcd_multiplier_tb is
 --  Port ( );
-end bcd_adder_tb;
+end bcd_multiplier_tb;
 
-architecture Behavioral of bcd_adder_tb is
+architecture Behavioral of bcd_multiplier_tb is
 
-component bcd_adder is
+component bcd_multiplier is
   Port (
   A, B: in std_logic_vector (3 downto 0);
   v: out std_logic_vector (7 downto 0)
@@ -49,7 +49,7 @@ signal v: std_logic_vector (7 downto 0);
 
 begin
 
-bcdAdder: bcd_adder port map (A, B, v);
+bcdMultiplier: bcd_multiplier port map (A, B, v);
 
 A <= "0001" after 0ns;
 B <= "0001" after 0ns;
