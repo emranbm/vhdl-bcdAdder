@@ -51,34 +51,7 @@ begin
 
 bcdMultiplier: bcd_multiplier port map (A, B, v);
 
-A <= "0001" after 0ns;
-B <= "0001" after 0ns;
-
---A <= "0001" after 10ns;
---B <= "0010" after 10ns;
-
---A <= "0010" after 20ns;
---B <= "0010" after 20ns;
-
---A <= "0011" after 30ns;
---B <= "0010" after 30ns;
-
---A <= "0011" after 40ns;
---B <= "0011" after 40ns;
-
---A <= "0100" after 50ns;
---B <= "0011" after 50ns;
-
---A <= "0111" after 60ns;
---B <= "0101" after 60ns;
-
---A <= "1001" after 70ns;
---B <= "1001" after 70ns;
-
---A <= "1000" after 80ns;
---B <= "0001" after 80ns;
-
---A <= "1001" after 90ns;
---B <= "0001" after 90ns;
+A <= "0000" after 0ns, "0001" after 10ns, "0010" after 20ns, "0011" after 30ns, "0100" after 40ns, "0101" after 50ns, "0110" after 60ns, "0111" after 70ns, "1000" after 80ns, "1001" after 90ns;
+B <= "1010" after 0ns, "0011" after 10ns, "0011" after 20ns, "1001" after 30ns, "0110" after 40ns, "0001" after 50ns, "0101" after 60ns, "1000" after 70ns, "0010" after 80ns, "0111" after 90ns;
 
 end Behavioral;
