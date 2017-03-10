@@ -2,8 +2,8 @@
 # Webtalk v2016.3 (64-bit)
 # SW Build 1682563 on Mon Oct 10 19:07:27 MDT 2016
 # IP Build 1681267 on Mon Oct 10 21:28:31 MDT 2016
-# Start of session at: Tue Mar 07 19:24:30 2017
-# Process ID: 4636
+# Start of session at: Fri Mar 10 10:12:43 2017
+# Process ID: 960
 # Current directory: D:/Uni/Dars/Term6/fpga-Dr.Sahebazzamani/project1/bcd-adder/bcd-adder.sim/sim_1/behav
 # Command line: wbtcv.exe -mode batch -source D:/Uni/Dars/Term6/fpga-Dr.Sahebazzamani/project1/bcd-adder/bcd-adder.sim/sim_1/behav/xsim.dir/bcd_adder_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Uni/Dars/Term6/fpga-Dr.Sahebazzamani/project1/bcd-adder/bcd-adder.sim/sim_1/behav/webtalk.log

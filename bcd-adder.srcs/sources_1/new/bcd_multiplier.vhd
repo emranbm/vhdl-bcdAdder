@@ -31,14 +31,14 @@ use IEEE.STD_LOGIC_1164.ALL;
 --library UNISIM;
 --use UNISIM.VComponents.all;
 
-entity bcd_adder is
+entity bcd_multiplier is
   Port (
   A, B: in std_logic_vector (3 downto 0);
   v: out std_logic_vector (7 downto 0)
   );
-end bcd_adder;
+end bcd_multiplier;
 
-architecture Behavioral of bcd_adder is
+architecture Behavioral of bcd_multiplier is
 
 component half_adder is
   port (
@@ -69,12 +69,12 @@ m2: multiplier port map (A(3 downto 2), B(1 downto 0), p2);
 m3: multiplier port map (A(1 downto 0), B(3 downto 2), p3); 
 m4: multiplier port map (A(3 downto 2), B(3 downto 2), p4);
 
-fa11: full_adder port map(p1(2), p1(3), p3(0), s11, cout11);
+fa11: full_adder port map(p1(2), p2(0), p3(0), s11, cout11);
 fa12: full_adder port map(p1(3), p2(1), p3(1), s12, cout12);
 fa13: full_adder port map(cout12, p2(2), p3(2), s13, cout13);
 
 ha21: half_adder port map(cout11, s12, s21, cout21);
-fa22: full_adder port map(cout21, s13, p3(0), s22, cout22);
+fa22: full_adder port map(cout21, s13, p4(0), s22, cout22);
 fa23: full_adder port map(cout13, p2(3), p3(3), s23, cout23);
 fa24: full_adder port map(cout23, cout31, p4(2), s24, cout24);
 
